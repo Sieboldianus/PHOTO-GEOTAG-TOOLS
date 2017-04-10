@@ -1,4 +1,4 @@
-ArcGIS PHOTO GEOTAG TOOLS
+PHOTO GEOTAG TOOLS Toolbox (ArcGIS)
 ====================
 
 ![Vis Example](sightline_img.png?raw=true)
@@ -44,7 +44,7 @@ This tool has been successfully tested in ArcMap 10.4.
 
 ## Other Important Downloads
 
-This is a youtube turotial/workshop that guides through the generation of Flickr tag maps, which includes the use of ArcGIS PHOTO GEOTAG TOOLS:
+This is a youtube tutorial/ workshop that guides through the generation of Flickr tag maps, which includes the use of ArcGIS PHOTO GEOTAG TOOLS:
 
 * [Youtube Workshop](https://www.youtube.com/watch?v=3K_oVk4vhHE)
 
