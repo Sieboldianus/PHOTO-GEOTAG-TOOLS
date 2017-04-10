@@ -3,14 +3,20 @@ ArcGIS PHOTO GEOTAG TOOLS
 
 ![Vis Example](sightline_img.png?raw=true)
 
-PHOTO GEOTAG TOOLS Tools is a collection of tools used to process and cluster photo metadata to generate Tag Maps and [similar Visualizations](https://www.flickr.com/photos/64974314@N08/albums/72157628868173205):
+PHOTO GEOTAG TOOLS Tools is a collection of tools for processing and clustering photo metadata to generate Tag Maps and [similar Visualizations](https://www.flickr.com/photos/64974314@N08/albums/72157628868173205):
 
 * **Tagrunner All/Standard:** This tool will cluster photo locations, calculate statistics (photos/ user numbers per cluster) and generate Alpha Shapes for the placement of labels.
 
 * **Cluster Photo Locations:** This Tool will cluster large point datasets and calculate basic statistics. Output is a point shapefile.
-
-* **Calculate Weights:** This is a Python based Model Builder script that runs a weighting Algorithm to calculate a) a weighted number between photo count/ user count and b) to calculate the single densest cluster per tag ('HImP').
-
+	This is an example of different photo locations clustered at Toronto High Park:
+	![Geoprocessing > ArcToolbox](img5.png)
+	
+* **Calculate Weights:** This is a Python based Model Builder script that runs a Weighting Algorithm to calculate a) a weighted number between photo count/ user count and b) to calculate the single densest cluster per tag ('HImP').
+	The following weighting formulas have been tested:
+	*  `1+ [Join_Count] *(sqr(1/( [Join_Count] / [COUNT_User] )^3)) ` → Standard weighting formula
+	* `1+ [Join_Count] *(sqr(1/( [Join_Count] / [COUNT_User] )^2)) ` → less importance on User_Count in comparison to photo count `[Join_Count]`
+	* `sqr(([Join_Count]+(2*sqr([Join_Count])))*2) ` → Ignores User_Count, this will emphasize individual and very active users
+	
 This tool has been successfully tested in ArcMap 10.4. 
 
 ## Download & Install
@@ -38,7 +44,7 @@ This tool has been successfully tested in ArcMap 10.4.
 
 ## Other Important Downloads
 
-Now you have it. Other downloads include:
+This is a youtube turotial/workshop that guides through the generation of Flickr tag maps, which includes the use of ArcGIS PHOTO GEOTAG TOOLS:
 
 * [Youtube Workshop](https://www.youtube.com/watch?v=3K_oVk4vhHE)
 
